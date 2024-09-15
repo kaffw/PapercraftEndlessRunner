@@ -13,9 +13,12 @@ public class AudioManager : MonoBehaviour
     public GameObject bgmAudio;
     public AudioSource bgmAudioSource;
 
+    public AudioSource clickSFX;
+    public bool clickOnCooldown = false;
     private void Start()
     {
         bgmAudioSource = bgmAudio.GetComponent<AudioSource>();
+        clickSFX.enabled = false;
     }
     private void Update()
     {
@@ -25,6 +28,20 @@ public class AudioManager : MonoBehaviour
             bgmAudioSource.volume = bgmSliderVal;
 
             sfxSliderVal = sfxSlider.value;
+            clickSFX.volume = sfxSlider.value;
         }
+
+        if (Input.GetMouseButtonDown(0) && !clickOnCooldown)
+        {
+            StartCoroutine(OnClickSFX());
+        }
+    }
+    private IEnumerator OnClickSFX()
+    {
+        clickSFX.enabled = true;
+        clickOnCooldown = true;
+        yield return new WaitForSeconds(1f);
+        clickSFX.enabled = false;
+        clickOnCooldown = false;
     }
 }

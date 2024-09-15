@@ -10,6 +10,15 @@ public class FanBehaviour : MonoBehaviour
     public Camera mainCamera;
 
     public bool clickAction = false;
+
+    public SpriteRenderer fanSR;
+    public Sprite[] fanSkinCollection = new Sprite[5];
+    void Start()
+    {
+        fanSR = GetComponent<SpriteRenderer>();
+
+        fanSR.sprite = fanSkinCollection[CustomizeManager.fanIndex];
+    }
     private void Update()
     {
         if (papercraft != null)

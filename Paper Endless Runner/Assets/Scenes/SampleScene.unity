@@ -295,6 +295,13 @@ MonoBehaviour:
   yValue: 1.5
   mainCamera: {fileID: 519420031}
   clickAction: 0
+  fanSR: {fileID: 0}
+  fanSkinCollection:
+  - {fileID: 21300000, guid: 909afe83d22f7e94280d1085b9a82bff, type: 3}
+  - {fileID: 21300000, guid: b32d6c40142c3684186ebf752436f369, type: 3}
+  - {fileID: 21300000, guid: dba9e2234e155cb41897bbf6840bab42, type: 3}
+  - {fileID: 21300000, guid: d09d3a5c5597da1448e8a301ad4b4ee5, type: 3}
+  - {fileID: 21300000, guid: dba9e2234e155cb41897bbf6840bab42, type: 3}
 --- !u!4 &627353784
 Transform:
   m_ObjectHideFlags: 0
@@ -504,6 +511,7 @@ GameObject:
   - component: {fileID: 1380719474}
   - component: {fileID: 1380719475}
   - component: {fileID: 1380719476}
+  - component: {fileID: 1380719477}
   m_Layer: 0
   m_Name: Papercraft
   m_TagString: Player
@@ -640,6 +648,25 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.1
+--- !u!114 &1380719477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1380719472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ba76453e979d3c429330c3d271a2c6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aircraftSR: {fileID: 0}
+  aircraftSkinCollection:
+  - {fileID: 21300000, guid: 52a78348e1b2bf64bba16db9d91e90a6, type: 3}
+  - {fileID: 21300000, guid: b10ec97ac820ad7498607428738f011c, type: 3}
+  - {fileID: 1737010536, guid: d3b343717805ba847b34087a6f5c1f33, type: 3}
+  - {fileID: 21300000, guid: 26a987de200a1b04293f8cde225da119, type: 3}
+  - {fileID: 21300000, guid: 71e980498d8c09048a639b045006f22f, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

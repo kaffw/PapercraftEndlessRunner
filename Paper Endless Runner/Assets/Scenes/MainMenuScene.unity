@@ -4404,7 +4404,7 @@ MonoBehaviour:
   settingsCanvas: {fileID: 122926793}
   bgmSlider: {fileID: 1090955086}
   sfxSlider: {fileID: 1261907678}
-  bgmAudio: {fileID: 0}
+  bgmAudio: {fileID: 1822391246}
   bgmAudioSource: {fileID: 0}
 --- !u!1 &1882861760
 GameObject:

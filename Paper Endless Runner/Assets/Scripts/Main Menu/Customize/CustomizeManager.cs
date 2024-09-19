@@ -17,6 +17,7 @@ public class CustomizeManager : MonoBehaviour
 
     public GameObject customizeCanvas;
 
+    public bool acNextCD, acPrevCD, fanNextCD, fanPrevCD;
     private void Start()
     {
         aircraftSkinSelected.sprite = aircraftSkinCollection[aircraftIndex];
@@ -25,56 +26,106 @@ public class CustomizeManager : MonoBehaviour
         aircraftImageDisplay.sprite = aircraftSkinCollection[aircraftIndex];
 
         customizeCanvas.SetActive(false);
+
+        acNextCD = acPrevCD = fanNextCD = fanPrevCD = false;
     }
     public void AircraftSkinNextOnClick()
     {
-        aircraftIndex++;
-        if (aircraftIndex >= aircraftSkinCollection.Length)
+        if (!acNextCD)
         {
-            aircraftIndex = 0;
-            aircraftImageDisplay.sprite = aircraftSkinCollection[aircraftIndex];
+            aircraftIndex++;
+            if (aircraftIndex >= aircraftSkinCollection.Length)
+            {
+                aircraftIndex = 0;
+                aircraftImageDisplay.sprite = aircraftSkinCollection[aircraftIndex];
+            }
+            else aircraftImageDisplay.sprite = aircraftSkinCollection[aircraftIndex];
+
+            acNextCD = true;
+            StartCoroutine(Cooldown(1));
+
+            Debug.Log("aircraft next skin");
         }
-        else aircraftImageDisplay.sprite = aircraftSkinCollection[aircraftIndex];
-        
-        Debug.Log("aircraft next skin");
     }
     public void AircraftSkinPrevOnClick()
     {
-        aircraftIndex--;
-        if (aircraftIndex < 0)
+        if (!acPrevCD)
         {
-            aircraftIndex = aircraftSkinCollection.Length - 1;
-            aircraftImageDisplay.sprite = aircraftSkinCollection[aircraftIndex];
-        }
-        else aircraftImageDisplay.sprite = aircraftSkinCollection[aircraftIndex];
+            aircraftIndex--;
+            if (aircraftIndex < 0)
+            {
+                aircraftIndex = aircraftSkinCollection.Length - 1;
+                aircraftImageDisplay.sprite = aircraftSkinCollection[aircraftIndex];
+            }
+            else aircraftImageDisplay.sprite = aircraftSkinCollection[aircraftIndex];
 
-        Debug.Log("aircraft previous skin");
+            acPrevCD = true;
+            StartCoroutine(Cooldown(2));
+
+            Debug.Log("aircraft previous skin");
+        }
     }
 
     public void FanSkinNextOnClick()
     {
-        fanIndex++;
-        if (fanIndex >= fanSkinCollection.Length)
+        if (!fanNextCD)
         {
-            fanIndex = 0;
-            fanImageDisplay.sprite = fanSkinCollection[fanIndex];
-        }
-        else fanImageDisplay.sprite = fanSkinCollection[fanIndex];
+            fanIndex++;
+            if (fanIndex >= fanSkinCollection.Length)
+            {
+                fanIndex = 0;
+                fanImageDisplay.sprite = fanSkinCollection[fanIndex];
+            }
+            else fanImageDisplay.sprite = fanSkinCollection[fanIndex];
 
-        Debug.Log("fan next skin");
+            fanNextCD = true;
+            StartCoroutine(Cooldown(3));
+
+            Debug.Log("fan next skin");
+        }
     }
     public void FanSkinPrevOnClick()
     {
-        fanIndex--;
-        if (fanIndex < 0)
+        if (!fanPrevCD)
         {
-            fanIndex = fanSkinCollection.Length - 1;
-            fanImageDisplay.sprite = fanSkinCollection[fanIndex];
-        }
-        else fanImageDisplay.sprite = fanSkinCollection[fanIndex];
+            fanIndex--;
+            if (fanIndex < 0)
+            {
+                fanIndex = fanSkinCollection.Length - 1;
+                fanImageDisplay.sprite = fanSkinCollection[fanIndex];
+            }
+            else fanImageDisplay.sprite = fanSkinCollection[fanIndex];
 
-        Debug.Log("fan previous skin");
+            fanPrevCD = true;
+            StartCoroutine(Cooldown(4));
+
+            Debug.Log("fan previous skin");
+        }
     }
 
+    private IEnumerator Cooldown(int val)
+    {
+        switch (val)
+        {
+            case 1:
+                yield return new WaitForSeconds(1f);
+                acNextCD = false;
+            break;
 
+            case 2:
+                yield return new WaitForSeconds(1f);
+                acPrevCD = false;
+            break;
+
+            case 3:
+                yield return new WaitForSeconds(1f);
+                fanNextCD = false;
+            break;
+
+            case 4:
+                yield return new WaitForSeconds(1f);
+                fanPrevCD = false;
+            break;
+        }
+    }
 }

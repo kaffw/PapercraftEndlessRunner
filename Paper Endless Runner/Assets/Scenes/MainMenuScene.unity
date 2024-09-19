@@ -268,6 +268,7 @@ GameObject:
   - component: {fileID: 37291059}
   - component: {fileID: 37291058}
   - component: {fileID: 37291057}
+  - component: {fileID: 37291060}
   m_Layer: 5
   m_Name: Back Button
   m_TagString: Untagged
@@ -376,7 +377,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
-  m_FillAmount: 1
+  m_FillAmount: 0
   m_FillClockwise: 0
   m_FillOrigin: 2
   m_UseSpriteMesh: 0
@@ -389,6 +390,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 37291055}
   m_CullTransparentMesh: 1
+--- !u!114 &37291060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 37291055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50732ba653a3fd84784a6e7a0c795d47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 0}
+  image: {fileID: 0}
 --- !u!1 &42581891
 GameObject:
   m_ObjectHideFlags: 0
@@ -680,6 +695,7 @@ GameObject:
   - component: {fileID: 155729087}
   - component: {fileID: 155729086}
   - component: {fileID: 155729085}
+  - component: {fileID: 155729088}
   m_Layer: 5
   m_Name: Settings Canvas
   m_TagString: Untagged
@@ -788,7 +804,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
-  m_FillAmount: 1
+  m_FillAmount: 0
   m_FillClockwise: 0
   m_FillOrigin: 2
   m_UseSpriteMesh: 0
@@ -801,6 +817,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 155729083}
   m_CullTransparentMesh: 1
+--- !u!114 &155729088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 155729083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50732ba653a3fd84784a6e7a0c795d47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 0}
+  image: {fileID: 0}
 --- !u!1 &156562913
 GameObject:
   m_ObjectHideFlags: 0
@@ -947,6 +977,7 @@ GameObject:
   - component: {fileID: 163146153}
   - component: {fileID: 163146152}
   - component: {fileID: 163146151}
+  - component: {fileID: 163146154}
   m_Layer: 5
   m_Name: Customize Button
   m_TagString: Untagged
@@ -1055,7 +1086,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
-  m_FillAmount: 1
+  m_FillAmount: 0
   m_FillClockwise: 0
   m_FillOrigin: 2
   m_UseSpriteMesh: 0
@@ -1068,6 +1099,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 163146149}
   m_CullTransparentMesh: 1
+--- !u!114 &163146154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 163146149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50732ba653a3fd84784a6e7a0c795d47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 0}
+  image: {fileID: 0}
 --- !u!1 &165690952
 GameObject:
   m_ObjectHideFlags: 0
@@ -1080,6 +1125,7 @@ GameObject:
   - component: {fileID: 165690956}
   - component: {fileID: 165690955}
   - component: {fileID: 165690954}
+  - component: {fileID: 165690957}
   m_Layer: 5
   m_Name: Play Button
   m_TagString: Untagged
@@ -1188,7 +1234,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
-  m_FillAmount: 1
+  m_FillAmount: 0
   m_FillClockwise: 0
   m_FillOrigin: 2
   m_UseSpriteMesh: 0
@@ -1201,6 +1247,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 165690952}
   m_CullTransparentMesh: 1
+--- !u!114 &165690957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 165690952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50732ba653a3fd84784a6e7a0c795d47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 0}
+  image: {fileID: 0}
 --- !u!1 &238838959
 GameObject:
   m_ObjectHideFlags: 0
@@ -1437,6 +1497,10 @@ MonoBehaviour:
   aircraftImageDisplay: {fileID: 806820099}
   fanImageDisplay: {fileID: 2060682684}
   customizeCanvas: {fileID: 1500853349}
+  acNextCD: 0
+  acPrevCD: 0
+  fanNextCD: 0
+  fanPrevCD: 0
 --- !u!212 &296322818
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1576,6 +1640,7 @@ GameObject:
   - component: {fileID: 383851296}
   - component: {fileID: 383851295}
   - component: {fileID: 383851294}
+  - component: {fileID: 383851297}
   m_Layer: 5
   m_Name: Back Button
   m_TagString: Untagged
@@ -1684,7 +1749,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
-  m_FillAmount: 1
+  m_FillAmount: 0
   m_FillClockwise: 0
   m_FillOrigin: 2
   m_UseSpriteMesh: 0
@@ -1697,6 +1762,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 383851292}
   m_CullTransparentMesh: 1
+--- !u!114 &383851297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 383851292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50732ba653a3fd84784a6e7a0c795d47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 0}
+  image: {fileID: 0}
 --- !u!1 &402326054
 GameObject:
   m_ObjectHideFlags: 0
@@ -2403,6 +2482,7 @@ GameObject:
   - component: {fileID: 918924317}
   - component: {fileID: 918924316}
   - component: {fileID: 918924315}
+  - component: {fileID: 918924318}
   m_Layer: 5
   m_Name: Fan Previous Button
   m_TagString: Untagged
@@ -2486,6 +2566,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 918924318}
+        m_TargetAssemblyTypeName: EncircleOnClickEffect, Assembly-CSharp
+        m_MethodName: Encircle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &918924316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2511,7 +2603,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
-  m_FillAmount: 1
+  m_FillAmount: 0
   m_FillClockwise: 0
   m_FillOrigin: 2
   m_UseSpriteMesh: 0
@@ -2524,6 +2616,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 918924313}
   m_CullTransparentMesh: 1
+--- !u!114 &918924318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 918924313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f751641ae91c774296fb49bbc540604, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 0}
+  cooldown: 0
 --- !u!1 &937220212
 GameObject:
   m_ObjectHideFlags: 0
@@ -2927,6 +3033,7 @@ GameObject:
   - component: {fileID: 1189461784}
   - component: {fileID: 1189461783}
   - component: {fileID: 1189461782}
+  - component: {fileID: 1189461785}
   m_Layer: 5
   m_Name: Aircraft Previous Button
   m_TagString: Untagged
@@ -3010,6 +3117,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1189461785}
+        m_TargetAssemblyTypeName: EncircleOnClickEffect, Assembly-CSharp
+        m_MethodName: Encircle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1189461783
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3035,7 +3154,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
-  m_FillAmount: 1
+  m_FillAmount: 0
   m_FillClockwise: 0
   m_FillOrigin: 2
   m_UseSpriteMesh: 0
@@ -3048,6 +3167,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1189461780}
   m_CullTransparentMesh: 1
+--- !u!114 &1189461785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1189461780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f751641ae91c774296fb49bbc540604, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 0}
+  cooldown: 0
 --- !u!1 &1203595734
 GameObject:
   m_ObjectHideFlags: 0
@@ -3194,6 +3327,7 @@ GameObject:
   - component: {fileID: 1215568159}
   - component: {fileID: 1215568158}
   - component: {fileID: 1215568157}
+  - component: {fileID: 1215568160}
   m_Layer: 5
   m_Name: Aircraft Next Button
   m_TagString: Untagged
@@ -3277,6 +3411,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1215568160}
+        m_TargetAssemblyTypeName: EncircleOnClickEffect, Assembly-CSharp
+        m_MethodName: Encircle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1215568158
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3302,7 +3448,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
-  m_FillAmount: 1
+  m_FillAmount: 0
   m_FillClockwise: 0
   m_FillOrigin: 2
   m_UseSpriteMesh: 0
@@ -3315,6 +3461,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1215568155}
   m_CullTransparentMesh: 1
+--- !u!114 &1215568160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1215568155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f751641ae91c774296fb49bbc540604, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 0}
+  cooldown: 0
 --- !u!1 &1226286211
 GameObject:
   m_ObjectHideFlags: 0
@@ -3436,12 +3596,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1226286211}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -592.99524, y: -292.3738, z: 2.7417207}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1852862160}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1261907676
 GameObject:
@@ -4478,12 +4638,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1822391246}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -592.99524, y: -292.3738, z: 2.7417207}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1852862160}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1852862159
 GameObject:
@@ -4514,7 +4674,9 @@ Transform:
   m_LocalPosition: {x: 592.99524, y: 292.3738, z: -2.7417207}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1822391248}
+  - {fileID: 1226286213}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1852862161
@@ -4907,6 +5069,7 @@ GameObject:
   - component: {fileID: 2031403319}
   - component: {fileID: 2031403318}
   - component: {fileID: 2031403317}
+  - component: {fileID: 2031403320}
   m_Layer: 5
   m_Name: Fan Next Button
   m_TagString: Untagged
@@ -4990,6 +5153,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2031403320}
+        m_TargetAssemblyTypeName: EncircleOnClickEffect, Assembly-CSharp
+        m_MethodName: Encircle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2031403318
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5015,7 +5190,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
-  m_FillAmount: 1
+  m_FillAmount: 0
   m_FillClockwise: 0
   m_FillOrigin: 2
   m_UseSpriteMesh: 0
@@ -5028,6 +5203,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2031403315}
   m_CullTransparentMesh: 1
+--- !u!114 &2031403320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2031403315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f751641ae91c774296fb49bbc540604, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 0}
+  cooldown: 0
 --- !u!1 &2060682682
 GameObject:
   m_ObjectHideFlags: 0
@@ -5171,8 +5360,6 @@ SceneRoots:
   - {fileID: 402326055}
   - {fileID: 296322816}
   - {fileID: 1852862160}
-  - {fileID: 1822391248}
-  - {fileID: 1226286213}
   - {fileID: 522440153}
   - {fileID: 1500853353}
   - {fileID: 122926797}

@@ -25,7 +25,7 @@ public class AudioManager : MonoBehaviour
         if (settingsCanvas.activeInHierarchy)
         {
             bgmSliderVal = bgmSlider.value;
-            bgmAudioSource.volume = bgmSliderVal;
+            bgmAudioSource.volume = bgmSlider.value;
 
             sfxSliderVal = sfxSlider.value;
             clickSFX.volume = sfxSlider.value;

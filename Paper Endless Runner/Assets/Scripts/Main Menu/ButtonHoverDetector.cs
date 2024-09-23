@@ -11,11 +11,11 @@ public class ButtonHoverDetector : MonoBehaviour, IPointerEnterHandler, IPointer
 
     public bool isHovering = false;
 
-    private void Start()
+    void OnEnable()
     {
         button = GetComponent<Button>();
         image = GetComponent<Image>();
-        
+
         image.fillAmount = 0f;
     }
     void Update()
@@ -43,6 +43,12 @@ public class ButtonHoverDetector : MonoBehaviour, IPointerEnterHandler, IPointer
 
         while (elapsed < duration)
         {
+            if (!isHovering)
+            {
+                image.fillAmount = 0f;
+                yield break;
+            }
+
             elapsed += Time.deltaTime;
             image.fillAmount = Mathf.Lerp(0f, 1f, elapsed / duration);
             yield return null;

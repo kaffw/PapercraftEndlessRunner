@@ -36,4 +36,10 @@ public class MainMenuButtonManager : MonoBehaviour
 
         SettingsCanvas.SetActive(false);
     }
+
+    public void Quit()
+    {
+        Debug.Log("Application Quit!");
+        Application.Quit();
+    }
 }

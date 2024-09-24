@@ -7,7 +7,7 @@ public class MainMenuButtonManager : MonoBehaviour
     public GameObject MainCanvas, CustomizeCanvas, SettingsCanvas;
     public void PlayButtonOnClick()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
     }
 
     public void CustomizeEnterButtonOnClick()

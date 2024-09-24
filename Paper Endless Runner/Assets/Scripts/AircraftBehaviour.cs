@@ -12,4 +12,9 @@ public class AircraftBehaviour : MonoBehaviour
 
         aircraftSR.sprite = aircraftSkinCollection[CustomizeManager.aircraftIndex];
     }
+
+    private void Update()
+    {
+        aircraftSR.sprite = aircraftSkinCollection[CustomizeManager.aircraftIndex];
+    }
 }

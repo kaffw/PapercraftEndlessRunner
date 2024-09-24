@@ -21,6 +21,8 @@ public class FanBehaviour : MonoBehaviour
     }
     private void Update()
     {
+        fanSR.sprite = fanSkinCollection[CustomizeManager.fanIndex];
+
         if (papercraft != null)
         {
             Vector3 direction = papercraft.transform.position - transform.position;

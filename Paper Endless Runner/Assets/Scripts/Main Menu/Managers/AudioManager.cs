@@ -13,12 +13,16 @@ public class AudioManager : MonoBehaviour
     public GameObject bgmAudio;
     public AudioSource bgmAudioSource;
 
-    public AudioSource clickSFX;
+    public AudioSource[] clickSFX;
     public bool clickOnCooldown = false;
     private void Start()
     {
         bgmAudioSource = bgmAudio.GetComponent<AudioSource>();
-        clickSFX.enabled = false;
+        //clickSFX.enabled = false;
+        foreach (var sfx in clickSFX)
+        {
+            sfx.enabled = false;
+        }
     }
     private void Update()
     {
@@ -28,20 +32,28 @@ public class AudioManager : MonoBehaviour
             bgmAudioSource.volume = bgmSlider.value;
 
             sfxSliderVal = sfxSlider.value;
-            clickSFX.volume = sfxSlider.value;
+            
+            foreach (var sfx in clickSFX)
+            {
+                sfx.volume = sfxSlider.value;
+            }
         }
 
         if (Input.GetMouseButtonDown(0) && !clickOnCooldown)
         {
-            StartCoroutine(OnClickSFX());
+            StartCoroutine(OnClickSFX(0));
         }
     }
-    private IEnumerator OnClickSFX()
+    public void PlayErrorSFX()
     {
-        clickSFX.enabled = true;
+        StartCoroutine(OnClickSFX(1));
+    } 
+    private IEnumerator OnClickSFX(int index)
+    {
+        clickSFX[index].enabled = true;
         clickOnCooldown = true;
         yield return new WaitForSeconds(1f);
-        clickSFX.enabled = false;
+        clickSFX[index].enabled = false;
         clickOnCooldown = false;
     }
 }

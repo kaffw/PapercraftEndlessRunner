@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 using System.IO;
 public class LeaderboardsManager : MonoBehaviour
 {
@@ -31,6 +33,9 @@ public class LeaderboardsManager : MonoBehaviour
     public static bool startInstance = false;
 
     private string filePath;
+
+    public GameObject leaderboardsCanvas, distance, coin;
+    public GameObject[] distanceRankingsDisplay, coinRankingsDisplay;
     void Start()
     {
         if (!startInstance)
@@ -42,7 +47,12 @@ public class LeaderboardsManager : MonoBehaviour
             startInstance = true;
         }
 
-        //DisplayRanks();
+        DisplayDistanceTraveled();
+        
+        distance.SetActive(false);
+        coin.SetActive(false);
+
+        leaderboardsCanvas.SetActive(false);
     }
 
     private void Update()
@@ -50,10 +60,21 @@ public class LeaderboardsManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.U))
         {
             DisplayDistanceTraveled();
+            distance.SetActive(true);
+            coin.SetActive(false);
         }
         if (Input.GetKeyDown(KeyCode.I))
         {
             DisplayCoinCollected();
+            coin.SetActive(true);
+            distance.SetActive(false);
+
+        }
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            DisplayTotalAchieved();
+            distance.SetActive(false);
+            coin.SetActive(false);
         }
     }
 
@@ -102,18 +123,69 @@ public class LeaderboardsManager : MonoBehaviour
     public void DisplayDistanceTraveled()
     {
         ReadFile();
-        ranks.Sort((x, y) => x.totalDistanceTraveled.CompareTo(y.totalDistanceTraveled));
+        ranks.Sort((x, y) => y.totalDistanceTraveled.CompareTo(x.totalDistanceTraveled));
 
-        foreach (var x in ranks)
+        /*foreach (var x in ranks)
         {
             Debug.Log($"Added ranking: {x.name}, Index: {x.aircraftSelectedIndex}, Distance: {x.totalDistanceTraveled}, Coins: {x.totalCoinsCollected}, Raw Total: {x.totalScoreRaw}, Total: {x.totalScoreAchieved}, Difficulty: {x.difficultyMultiplier}");
+        }*/
+
+        for (int i = 0; i < 10; i++)
+        {
+            if (i < ranks.Count)
+            {
+                Image s = distanceRankingsDisplay[i].transform.Find("Aircraft Image").GetComponent<Image>();
+                s.sprite = AircraftSkinCollection[ranks[i].aircraftSelectedIndex];
+
+                TextMeshProUGUI username = distanceRankingsDisplay[i].transform.Find("Username Text").GetComponent<TextMeshProUGUI>();
+                username.text = ranks[i].name;
+
+                TextMeshProUGUI dist = distanceRankingsDisplay[i].transform.Find("Distance Traveled").GetComponent<TextMeshProUGUI>();
+                dist.text = ranks[i].totalDistanceTraveled.ToString();
+            }
+            else
+            {
+                distanceRankingsDisplay[i].SetActive(false);
+                Debug.Log("Empty");
+            }
         }
     }
 
     public void DisplayCoinCollected()
     {
         ReadFile();
-        ranks.Sort((x, y) => x.totalCoinsCollected.CompareTo(y.totalCoinsCollected));
+        ranks.Sort((x, y) => y.totalCoinsCollected.CompareTo(x.totalCoinsCollected));
+
+        /*foreach (var x in ranks)
+        {
+            Debug.Log($"Added ranking: {x.name}, Index: {x.aircraftSelectedIndex}, Distance: {x.totalDistanceTraveled}, Coins: {x.totalCoinsCollected}, Raw Total: {x.totalScoreRaw}, Total: {x.totalScoreAchieved}, Difficulty: {x.difficultyMultiplier}");
+        }*/
+
+        for (int i = 0; i < 10; i++)
+        {
+            if (i < ranks.Count)
+            {
+                Image s = coinRankingsDisplay[i].transform.Find("Aircraft Image").GetComponent<Image>();
+                s.sprite = AircraftSkinCollection[ranks[i].aircraftSelectedIndex];
+
+                TextMeshProUGUI username = coinRankingsDisplay[i].transform.Find("Username Text").GetComponent<TextMeshProUGUI>();
+                username.text = ranks[i].name;
+
+                TextMeshProUGUI dist = coinRankingsDisplay[i].transform.Find("Coins Collected").GetComponent<TextMeshProUGUI>();
+                dist.text = ranks[i].totalCoinsCollected.ToString();
+            }
+            else
+            {
+                coinRankingsDisplay[i].SetActive(false);
+                Debug.Log("Empty");
+            }
+        }
+    }
+
+    public void DisplayTotalAchieved()
+    {
+        ReadFile();
+        ranks.Sort((x, y) => y.totalScoreAchieved.CompareTo(x.totalScoreAchieved));
 
         foreach (var x in ranks)
         {

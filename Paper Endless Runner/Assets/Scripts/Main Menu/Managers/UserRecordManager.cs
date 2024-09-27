@@ -25,10 +25,12 @@ public class UserRecordManager : MonoBehaviour
 
     void Update()
     {
-        if(!stopRecording)
-        distanceTraveled = startPoint + playerAircraft.transform.position.x;
-        distanceTraveledText.text = distanceTraveled.ToString("F2") + "m";
-        CoinsCollectedText.text = coinsCollected.ToString();
+        if (!stopRecording)
+        {
+            distanceTraveled = startPoint + playerAircraft.transform.position.x;
+            distanceTraveledText.text = distanceTraveled.ToString("F2") + "m";
+            CoinsCollectedText.text = coinsCollected.ToString();
+        }
     }
     public void CollectCoin()
     {

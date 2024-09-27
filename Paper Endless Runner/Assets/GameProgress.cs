@@ -35,7 +35,7 @@ public class GameProgress : MonoBehaviour
 
     LEADERBOARDS =========================================================================================================================
     > string        :   playerName
-    > int           :   aircraftSkinSelected
+    > int           :   aircraftSkinSelectedIndex
     > float         :   totalDistanceTraveled
     > float         :   totalCoinsCollected
     > float         :   totalScoreRaw

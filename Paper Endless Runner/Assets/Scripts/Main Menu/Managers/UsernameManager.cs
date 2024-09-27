@@ -8,6 +8,13 @@ public class UsernameManager : MonoBehaviour
     public TMP_InputField inputField;
     public TextMeshProUGUI usernameText;
 
+    void Start()
+    {
+        if (username != null)
+        {
+            inputField.text = username;
+        }    
+    }
     public void SetUsername()
     {
         username = inputField.text;

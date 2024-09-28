@@ -7,13 +7,16 @@ public class UsernameManager : MonoBehaviour
     public static string username;
     public TMP_InputField inputField;
     public TextMeshProUGUI usernameText;
-
+    public AudioManager audioManager;
     void Start()
     {
         if (username != null)
         {
             inputField.text = username;
-        }    
+        }
+
+        audioManager = GameObject.Find("Audio Manager").GetComponent<AudioManager>();
+        inputField.onValueChanged.AddListener(OnValueChanged);
     }
     public void SetUsername()
     {
@@ -22,9 +25,8 @@ public class UsernameManager : MonoBehaviour
 
     public void RequireUsername()
     {
-        Debug.Log("Username required!");
-        //SFX Error play
-        AudioManager audioManager = GameObject.Find("Audio Manager").GetComponent<AudioManager>();
+        Debug.Log("Username_required!");
+        //SFX Error play      
         audioManager.PlayErrorSFX();
 
         StartCoroutine(HighlightText());
@@ -35,5 +37,10 @@ public class UsernameManager : MonoBehaviour
         usernameText.color = Color.red;
         yield return new WaitForSeconds(3f);
         usernameText.color = Color.black;
+    }
+
+    private void OnValueChanged(string input)
+    {
+        inputField.text = input.Replace(" ", "");
     }
 }

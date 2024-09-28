@@ -6,14 +6,14 @@ public class GameProgress : MonoBehaviour
 {
     /*
     Main Menu =========================================================================================================================
-    - PLAY
-    - LEADERBOARDS
-    - SETTINGS
-    - QUIT
+    - PLAY /
+    - LEADERBOARDS /
+    - SETTINGS /
+    - QUIT /
 
     PLAY =========================================================================================================================
-    - Input name
-    - Skin Customization
+    - Input name /
+    - Skin Customization /
     - Set Difficulty (Flashlight Mode || Hard Mode) //Last Priority
     - START GAME
 
@@ -22,13 +22,13 @@ public class GameProgress : MonoBehaviour
         Hard Mode               :   obstacle travel speed / spawn intensity increased per x distance
 
     LEADERBOARDS =========================================================================================================================
-    - Most Distance Traveled
-    - Most Coin Collected
+    - Most Distance Traveled /
+    - Most Coin Collected /
     - TOTAL SCORE ACHIEVED
 
     SETTINGS =========================================================================================================================
-    - BGM
-    - SFX
+    - BGM /
+    - SFX /
 
     START GAME =========================================================================================================================
     - GAME LOOP

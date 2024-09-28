@@ -18,7 +18,7 @@ public class UserRecordManager : MonoBehaviour
         if (UsernameManager.username != null)
             playerNameText.text = UsernameManager.username;
         else
-            playerNameText.text = "No username";
+            playerNameText.text = "No_username";
 
         distanceTraveled = coinsCollected = 0f;
     }

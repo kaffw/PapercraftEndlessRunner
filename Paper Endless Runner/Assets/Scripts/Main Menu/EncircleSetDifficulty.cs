@@ -7,6 +7,7 @@ public class EncircleSetDifficulty : MonoBehaviour
     public Image image;
     public bool cooldown = false;
     public bool filled = false;
+
     private void Start()
     {
         image = GetComponent<Image>();

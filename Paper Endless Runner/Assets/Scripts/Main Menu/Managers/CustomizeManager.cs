@@ -18,6 +18,10 @@ public class CustomizeManager : MonoBehaviour
     public GameObject customizeCanvas;
 
     public bool acNextCD, acPrevCD, fanNextCD, fanPrevCD;
+
+    public static bool flashlightModeOn, hardModeOn;
+    public bool flashlightCD, hardCD;
+
     private void Start()
     {
         aircraftSkinSelected.sprite = aircraftSkinCollection[aircraftIndex];
@@ -28,6 +32,7 @@ public class CustomizeManager : MonoBehaviour
         customizeCanvas.SetActive(false);
 
         acNextCD = acPrevCD = fanNextCD = fanPrevCD = false;
+        flashlightModeOn = hardModeOn = flashlightCD = hardCD = false;
     }
     public void AircraftSkinNextOnClick()
     {
@@ -100,6 +105,24 @@ public class CustomizeManager : MonoBehaviour
             StartCoroutine(Cooldown(4));
 
             Debug.Log("fan previous skin");
+        }
+    }
+
+    public void SetFlashlightDifficultyOn()
+    {
+        if (!flashlightCD)
+        {
+            flashlightModeOn = true;
+            StartCoroutine(Cooldown(1));
+        }
+    }
+
+    public void SetHardDifficultyOn()
+    {
+        if (!hardCD)
+        {
+            hardModeOn = true;
+            StartCoroutine(Cooldown(1));
         }
     }
 

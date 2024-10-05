@@ -5,14 +5,21 @@ using UnityEngine;
 public class CameraController : MonoBehaviour
 {
     public GameObject cameraObject;
-    public float moveSpeed;
+    public float moveSpeed = 1f; // to be affected by "Hard Difficulty"
+
+    private UserRecordManager userRecord;
     void Start()
     {
         cameraObject = GameObject.Find("Main Camera");
+        userRecord = GameObject.Find("User Record Manager").GetComponent<UserRecordManager>();
     }
 
     void Update()
     {
-        cameraObject.transform.position += new Vector3(Time.deltaTime * moveSpeed, 0, 0);
+        if (!userRecord.stopRecording)
+        {
+            moveSpeed = (int)((userRecord.distanceTraveled / 100) + 1);
+            cameraObject.transform.position += new Vector3(Time.deltaTime * moveSpeed, 0, 0);
+        }
     }
 }

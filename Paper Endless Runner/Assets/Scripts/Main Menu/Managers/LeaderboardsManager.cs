@@ -36,6 +36,9 @@ public class LeaderboardsManager : MonoBehaviour
 
     public GameObject leaderboardsCanvas, distance, coin;
     public GameObject[] distanceRankingsDisplay, coinRankingsDisplay;
+
+    EncircleSetDifficulty resetEncircleDistance, resetEncircleCoin;
+    public GameObject distScrollView, coinScrollView;
     void Start()
     {
         if (!startInstance)
@@ -48,8 +51,9 @@ public class LeaderboardsManager : MonoBehaviour
         }
 
         DisplayDistanceTraveled();
-        
-        distance.SetActive(false);
+        resetEncircleDistance = GameObject.Find("Distance Button").GetComponent<EncircleSetDifficulty>();
+        resetEncircleCoin = GameObject.Find("Coin Button").GetComponent<EncircleSetDifficulty>();
+        //distance.SetActive(false);
         coin.SetActive(false);
 
         leaderboardsCanvas.SetActive(false);
@@ -59,30 +63,52 @@ public class LeaderboardsManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.U))
         {
-            DisplayDistanceTraveled();
-            distance.SetActive(true);
-            coin.SetActive(false);
+            OpenDistanceLeaderboard();
         }
         if (Input.GetKeyDown(KeyCode.I))
         {
-            DisplayCoinCollected();
+            OpenCoinLeaderboard();
+            /*DisplayCoinCollected();
             coin.SetActive(true);
             distance.SetActive(false);
-
+            */
         }
-        if (Input.GetKeyDown(KeyCode.P))
+
+        /*if (Input.GetKeyDown(KeyCode.P))
         {
             DisplayTotalAchieved();
             distance.SetActive(false);
             coin.SetActive(false);
-        }
+        }*/
     }
 
+    public void OpenDistanceLeaderboard()
+    {
+        if (distScrollView.activeSelf == false)
+        {
+            DisplayDistanceTraveled();
+            resetEncircleCoin.Encircle();
+            resetEncircleDistance.Encircle();
+            distance.SetActive(true);
+            coin.SetActive(false);
+        }
+    }
+    public void OpenCoinLeaderboard()
+    {
+        if (coinScrollView.activeSelf == false)
+        {
+            DisplayCoinCollected();
+            resetEncircleCoin.Encircle();
+            resetEncircleDistance.Encircle();
+            coin.SetActive(true);
+            distance.SetActive(false);
+        }
+    }
     public void ReadFile()
     {
         ranks.Clear();
-        //filePath = @"C:\Users\Aceae\Documents\GitHub\PapercraftEndlessRunner\Paper Endless Runner\Assets\LeaderboardsRecord.txt"; // sa harong ni
-        filePath = @"D:\Users\Unit_21\Documents\GitHub\PapercraftEndlessRunner\Paper Endless Runner\Assets\LeaderboardsRecord.txt"; //sa lab
+        filePath = @"C:\Users\Aceae\Documents\GitHub\PapercraftEndlessRunner\Paper Endless Runner\Assets\LeaderboardsRecord.txt"; // sa harong ni
+        //filePath = @"D:\Users\Unit_21\Documents\GitHub\PapercraftEndlessRunner\Paper Endless Runner\Assets\LeaderboardsRecord.txt"; //sa lab
         if (File.Exists(filePath))
         {
             Debug.Log(filePath.ToString() + "file found");

@@ -13,15 +13,21 @@ public class FanBehaviour : MonoBehaviour
 
     public SpriteRenderer fanSR;
     public Sprite[] fanSkinCollection = new Sprite[5];
+
+    UserRecordManager userRecord;
+
     void Start()
     {
+        userRecord = GameObject.Find("User Record Manager").GetComponent<UserRecordManager>();
         fanSR = GetComponent<SpriteRenderer>();
 
         fanSR.sprite = fanSkinCollection[CustomizeManager.fanIndex];
     }
     private void Update()
     {
-        fanSR.sprite = fanSkinCollection[CustomizeManager.fanIndex];
+        if (userRecord.stopRecording) return; //Disable fan movement if player already lose
+
+        //fanSR.sprite = fanSkinCollection[CustomizeManager.fanIndex];
 
         if (papercraft != null)
         {

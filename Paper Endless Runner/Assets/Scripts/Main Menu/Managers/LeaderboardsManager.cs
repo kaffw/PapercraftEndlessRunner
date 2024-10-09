@@ -107,8 +107,8 @@ public class LeaderboardsManager : MonoBehaviour
     public void ReadFile()
     {
         ranks.Clear();
-        filePath = @"C:\Users\Aceae\Documents\GitHub\PapercraftEndlessRunner\Paper Endless Runner\Assets\LeaderboardsRecord.txt"; // sa harong ni
-        //filePath = @"D:\Users\Unit_21\Documents\GitHub\PapercraftEndlessRunner\Paper Endless Runner\Assets\LeaderboardsRecord.txt"; //sa lab
+        //filePath = @"C:\Users\Aceae\Documents\GitHub\PapercraftEndlessRunner\Paper Endless Runner\Assets\LeaderboardsRecord.txt"; // sa harong ni
+        filePath = @"D:\Users\Unit_21\Documents\GitHub\PapercraftEndlessRunner\Paper Endless Runner\Assets\LeaderboardsRecord.txt"; //sa lab
         if (File.Exists(filePath))
         {
             Debug.Log(filePath.ToString() + "file found");

@@ -43,8 +43,8 @@ public class UserRecordManager : MonoBehaviour
         //name - aircraftSelectedIndex - totalDistanceTraveled - totalCoinCollected - difficultyMultiplier
 
         stopRecording = true;
-        //filePath = @"C:\Users\Aceae\Documents\GitHub\PapercraftEndlessRunner\Paper Endless Runner\Assets\LeaderboardsRecord.txt"; // sa harong
-        filePath = @"D:\Users\Unit_21\Documents\GitHub\PapercraftEndlessRunner\Paper Endless Runner\Assets\LeaderboardsRecord.txt"; // sa lab
+        filePath = @"C:\Users\Aceae\Documents\GitHub\PapercraftEndlessRunner\Paper Endless Runner\Assets\LeaderboardsRecord.txt"; // sa harong
+        //filePath = @"D:\Users\Unit_21\Documents\GitHub\PapercraftEndlessRunner\Paper Endless Runner\Assets\LeaderboardsRecord.txt"; // sa lab
 
         if (File.Exists(filePath))
         {

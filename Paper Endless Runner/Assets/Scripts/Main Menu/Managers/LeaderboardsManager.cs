@@ -34,11 +34,11 @@ public class LeaderboardsManager : MonoBehaviour
 
     private string filePath;
 
-    public GameObject leaderboardsCanvas, distance, coin;
-    public GameObject[] distanceRankingsDisplay, coinRankingsDisplay;
+    public GameObject leaderboardsCanvas, distance, coin; //, total;
+    public GameObject[] distanceRankingsDisplay, coinRankingsDisplay; //, totalRankingsDisplay;
 
-    EncircleSetDifficulty resetEncircleDistance, resetEncircleCoin;
-    public GameObject distScrollView, coinScrollView;
+    EncircleSetDifficulty resetEncircleDistance, resetEncircleCoin; //, resetEncircleTotal;
+    public GameObject distScrollView, coinScrollView; //, totalScoreScrollView;
     void Start()
     {
         if (!startInstance)
@@ -53,6 +53,7 @@ public class LeaderboardsManager : MonoBehaviour
         DisplayDistanceTraveled();
         resetEncircleDistance = GameObject.Find("Distance Button").GetComponent<EncircleSetDifficulty>();
         resetEncircleCoin = GameObject.Find("Coin Button").GetComponent<EncircleSetDifficulty>();
+        //resetEncircleTotal = GameObject.Find("Total Score Button").GetComponent<EncircleSetDifficulty>();
         //distance.SetActive(false);
         coin.SetActive(false);
 
@@ -89,7 +90,10 @@ public class LeaderboardsManager : MonoBehaviour
             DisplayDistanceTraveled();
             resetEncircleCoin.Encircle();
             resetEncircleDistance.Encircle();
+            //resetEncircleTotal.Encircle();
             distance.SetActive(true);
+
+            //total.SetActive(false);
             coin.SetActive(false);
         }
     }
@@ -100,15 +104,33 @@ public class LeaderboardsManager : MonoBehaviour
             DisplayCoinCollected();
             resetEncircleCoin.Encircle();
             resetEncircleDistance.Encircle();
+            //resetEncircleTotal.Encircle();
             coin.SetActive(true);
+
+            //total.SetActive(false);
             distance.SetActive(false);
         }
     }
+
+    /*public void OpenTotalScoreLeaderboard()
+    {
+        if (totalScoreScrollView.activeSelf == false)
+        {
+            DisplayTotalScoreAchieved();
+            resetEncircleCoin.Encircle();
+            resetEncircleDistance.Encircle();
+            resetEncircleTotal.Encircle();
+            total.SetActive(true);
+
+            coin.SetActive(false);
+            distance.SetActive(false);
+        }
+    }*/
     public void ReadFile()
     {
         ranks.Clear();
-        //filePath = @"C:\Users\Aceae\Documents\GitHub\PapercraftEndlessRunner\Paper Endless Runner\Assets\LeaderboardsRecord.txt"; // sa harong ni
-        filePath = @"D:\Users\Unit_21\Documents\GitHub\PapercraftEndlessRunner\Paper Endless Runner\Assets\LeaderboardsRecord.txt"; //sa lab
+        filePath = @"C:\Users\Aceae\Documents\GitHub\PapercraftEndlessRunner\Paper Endless Runner\Assets\LeaderboardsRecord.txt"; // sa harong ni
+        //filePath = @"D:\Users\Unit_21\Documents\GitHub\PapercraftEndlessRunner\Paper Endless Runner\Assets\LeaderboardsRecord.txt"; //sa lab
         if (File.Exists(filePath))
         {
             Debug.Log(filePath.ToString() + "file found");
@@ -208,7 +230,7 @@ public class LeaderboardsManager : MonoBehaviour
         }
     }
 
-    public void DisplayTotalAchieved()
+    /*public void DisplayTotalAchieved()
     {
         ReadFile();
         ranks.Sort((x, y) => y.totalScoreAchieved.CompareTo(x.totalScoreAchieved));
@@ -217,7 +239,34 @@ public class LeaderboardsManager : MonoBehaviour
         {
             Debug.Log($"Added ranking: {x.name}, Index: {x.aircraftSelectedIndex}, Distance: {x.totalDistanceTraveled}, Coins: {x.totalCoinsCollected}, Raw Total: {x.totalScoreRaw}, Total: {x.totalScoreAchieved}, Difficulty: {x.difficultyMultiplier}");
         }
-    }
+    }*/
+
+    /*public void DisplayTotalScoreAchieved()
+    {
+        ReadFile();
+        ranks.Sort((x, y) => y.totalScoreAchieved.CompareTo(x.totalScoreAchieved));
+
+        for (int i = 0; i < 10; i++)
+        {
+            if (i < ranks.Count)
+            {
+                Image s = totalRankingsDisplay[i].transform.Find("Aircraft Image").GetComponent<Image>();
+                s.sprite = AircraftSkinCollection[ranks[i].aircraftSelectedIndex];
+
+                TextMeshProUGUI username = totalRankingsDisplay[i].transform.Find("Username Text").GetComponent<TextMeshProUGUI>();
+                username.text = ranks[i].name;
+
+                TextMeshProUGUI dist = totalRankingsDisplay[i].transform.Find("Total Score Achieved").GetComponent<TextMeshProUGUI>();
+                dist.text = ranks[i].totalScoreAchieved.ToString();
+            }
+            else
+            {
+                totalRankingsDisplay[i].SetActive(false);
+                Debug.Log("Empty");
+            }
+        }
+    }*/
+
     /*
     public void DisplayRanks()
     {

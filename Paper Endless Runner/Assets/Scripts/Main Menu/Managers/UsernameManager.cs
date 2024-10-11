@@ -35,7 +35,7 @@ public class UsernameManager : MonoBehaviour
     private IEnumerator HighlightText()
     {
         usernameText.color = Color.red;
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(1f);
         usernameText.color = Color.black;
     }
 

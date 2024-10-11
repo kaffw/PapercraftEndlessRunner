@@ -50,5 +50,7 @@ public class GameProgress : MonoBehaviour
     * use filestreams of C# ---> haven't tried yet.
 
     XXXXXX =========================================================================================================================
+   
+    update filePaths... UserRecordManager & LeaderboardsManager
     */
 }

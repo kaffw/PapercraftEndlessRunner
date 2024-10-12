@@ -14,3 +14,14 @@ Ase 0 0.83 0 1
 Gabbyconceptiongrande 4 8.81 0 1
 No_username 0 0.00 0 1
 No_username 0 18.99 0 1
+Aseya 1 16.23 0 1
+No_username 0 0.00 0 1
+No_username 0 8.52 0 1
+No_username 0 12.02 0 1
+No_username 0 0.00 0 1
+No_username 0 10.93 0 1
+No_username 0 10.80 0 1
+No_username 0 35.26 2 1
+No_username 0 -0.01 0 1
+No_username 0 16.34 0 1
+No_username 0 38.29 2 1

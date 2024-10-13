@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9c053caf65a43ba408f53024e4a4583f
+guid: bcaa576527587b741ae06dd2e3fe0df6
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Pause
+      name: 0
       rect:
         serializedVersion: 2
-        x: 161
-        y: 164
-        width: 64
-        height: 64
+        x: 0
+        y: 272
+        width: 101
+        height: 120
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f37e81a3804b8b84bbd0bf2ace644365
-      internalID: -148735080
+      spriteID: bbe89de2da15d004f91f9dfd6ac57c3b
+      internalID: -410486761
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Audio_Muted
+      name: 3
       rect:
         serializedVersion: 2
-        x: 61
-        y: 73
-        width: 64
-        height: 64
+        x: 300
+        y: 272
+        width: 105
+        height: 120
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b682fbfe519c1914f862e88f1a250838
-      internalID: 291277112
+      spriteID: decaa1bf82d3d8947b80e32bd88fe392
+      internalID: -2139438113
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Audio
+      name: 1
       rect:
         serializedVersion: 2
-        x: 161
-        y: 73
-        width: 64
-        height: 64
+        x: 137
+        y: 272
+        width: 55
+        height: 120
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1b16df0922406aa4087a1f02161de06a
-      internalID: 1501030742
+      spriteID: 0ded5595ae4a1804f81897251fa9c88b
+      internalID: 1840359400
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Home
+      name: 2
       rect:
         serializedVersion: 2
-        x: 655
-        y: 164
-        width: 64
-        height: 64
+        x: 196
+        y: 272
+        width: 105
+        height: 120
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,29 +187,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a990f8ab0d949f8498f128d049efbe96
-      internalID: -283006109
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Flashlight
-      rect:
-        serializedVersion: 2
-        x: 358
-        y: 72
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3ef101c8c6c4e974eae9ff36454a9812
-      internalID: -163785063
+      spriteID: 09b32ee41ea9b2c478b58f68f1ebac8a
+      internalID: 1687225005
       vertices: []
       indices: 
       edges: []
@@ -225,11 +204,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Audio: 1501030742
-      Audio_Muted: 291277112
-      Flashlight: -163785063
-      Home: -283006109
-      Pause: -148735080
+      0: -410486761
+      1: 1840359400
+      2: 1687225005
+      3: -2139438113
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -54,3 +54,8 @@ No_username 0 0.85 0 1
 No_username 0 6.90 0 1
 No_username 0 150.92 9 1
 Asheya 4 110.26 6 1
+No_username 0 0.95 0 1
+ac 0 -0.89 0 1
+asc 0 0.00 0 1
+asc 1 -1.27 0 1
+Asc 0 2.85 0 1

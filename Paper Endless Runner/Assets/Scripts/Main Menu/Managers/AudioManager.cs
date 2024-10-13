@@ -15,7 +15,8 @@ public class AudioManager : MonoBehaviour
 
     public AudioSource[] clickSFX;
     public bool clickOnCooldown = false;
-    
+
+    public static bool instanceTriggered = false;
     private void Start()
     {
         bgmAudioSource = bgmAudio.GetComponent<AudioSource>();
@@ -23,6 +24,13 @@ public class AudioManager : MonoBehaviour
         foreach (var sfx in clickSFX)
         {
             sfx.enabled = false;
+        }
+
+        if (!instanceTriggered)
+        {
+            instanceTriggered = true;
+            bgmSliderVal = 1f;
+            sfxSliderVal = 1f;
         }
     }
     private void Update()

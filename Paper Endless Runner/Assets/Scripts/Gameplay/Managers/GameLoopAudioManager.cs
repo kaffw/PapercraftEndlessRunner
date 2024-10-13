@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameLoopAudioManager : MonoBehaviour
 {
+    public GameObject gameLoopBGM;
     public GameObject[] gameLoopSFX;
     private void Start()
     {
@@ -14,6 +15,10 @@ public class GameLoopAudioManager : MonoBehaviour
 
             sfx.SetActive(false);
         }
+
+        AudioSource currBGM = gameLoopBGM.GetComponent<AudioSource>();
+        currBGM.volume = AudioManager.bgmSliderVal;
+        
     }
     public void PlayGameOverSFX()
     {

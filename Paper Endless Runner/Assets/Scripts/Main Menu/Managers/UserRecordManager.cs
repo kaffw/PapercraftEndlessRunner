@@ -11,9 +11,19 @@ public class UserRecordManager : MonoBehaviour
 
     private string filePath;
     public bool stopRecording = false;
+
+    public GameObject gameOverCanvasOb;
+    public GameLoopAudioManager glAudioManager;
+
+    bool isGameOverTriggered = false;
+
+    public static bool gameOver = false;
     void Start()
     {
+        gameOver = false;
+
         playerAircraft = GameObject.Find("Papercraft");
+        glAudioManager = GameObject.Find("Audio Manager").GetComponent<GameLoopAudioManager>();
 
         if (UsernameManager.username != null)
             playerNameText.text = UsernameManager.username;
@@ -30,8 +40,17 @@ public class UserRecordManager : MonoBehaviour
             distanceTraveled = startPoint + playerAircraft.transform.position.x;
             distanceTraveledText.text = distanceTraveled.ToString("F2") + "m";
             CoinsCollectedText.text = coinsCollected.ToString();
+
         }
-        //else display game over message... 
+        else
+        {
+            if (!isGameOverTriggered)
+            {
+                GameOver();
+                gameOver = true;
+                isGameOverTriggered = true;
+            }
+        }
     }
     public void CollectCoin()
     {
@@ -62,5 +81,12 @@ public class UserRecordManager : MonoBehaviour
         {
             Debug.LogError("File not found at: " + filePath);
         }
+    }
+    public void GameOver()
+    {
+        //Game Over Text
+        gameOverCanvasOb.SetActive(true);
+        Time.timeScale = 0;
+        glAudioManager.PlayGameOverSFX();
     }
 }

@@ -15,6 +15,7 @@ public class AudioManager : MonoBehaviour
 
     public AudioSource[] clickSFX;
     public bool clickOnCooldown = false;
+    
     private void Start()
     {
         bgmAudioSource = bgmAudio.GetComponent<AudioSource>();

@@ -7,6 +7,7 @@ public class PlayerGameOver : MonoBehaviour
     public bool collideInstance = false;
     public UserRecordManager urManager;
 
+    public GameObject coinSFXprefab;
     private void Start()
     {
         urManager = GameObject.Find("User Record Manager").GetComponent<UserRecordManager>();
@@ -24,6 +25,7 @@ public class PlayerGameOver : MonoBehaviour
 
         if (other.CompareTag("Coin"))
         {
+            Instantiate(coinSFXprefab);
             urManager.CollectCoin();
             Destroy(other.gameObject);
         }

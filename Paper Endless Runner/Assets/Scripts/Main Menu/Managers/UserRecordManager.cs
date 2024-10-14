@@ -6,6 +6,8 @@ using System.IO;
 public class UserRecordManager : MonoBehaviour
 {
     public TextMeshProUGUI playerNameText, distanceTraveledText, CoinsCollectedText;
+    public TextMeshProUGUI distanceTraveledTextPause, coinsCollectedTextPause;
+
     public float startPoint, distanceTraveled, coinsCollected;
     public GameObject playerAircraft;
 
@@ -39,7 +41,10 @@ public class UserRecordManager : MonoBehaviour
         {
             distanceTraveled = startPoint + playerAircraft.transform.position.x;
             distanceTraveledText.text = distanceTraveled.ToString("F2") + "m";
-            CoinsCollectedText.text = coinsCollected.ToString();
+            distanceTraveledTextPause.text = distanceTraveled.ToString("F2") + "m";
+
+            CoinsCollectedText.text = coinsCollected.ToString() + " coins";
+            coinsCollectedTextPause.text = coinsCollected.ToString() + " coins";
 
         }
         else

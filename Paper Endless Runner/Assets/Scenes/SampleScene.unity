@@ -256,6 +256,8 @@ MonoBehaviour:
   playerNameText: {fileID: 1757015814}
   distanceTraveledText: {fileID: 268811155}
   CoinsCollectedText: {fileID: 566106250}
+  distanceTraveledTextPause: {fileID: 428711970}
+  coinsCollectedTextPause: {fileID: 191199455}
   startPoint: 0
   distanceTraveled: 0
   coinsCollected: 0
@@ -7782,8 +7784,8 @@ SceneRoots:
   m_Roots:
   - {fileID: 1626108808}
   - {fileID: 1976684810}
-  - {fileID: 519420032}
   - {fileID: 1630760650}
+  - {fileID: 519420032}
   - {fileID: 1380719473}
   - {fileID: 627353784}
   - {fileID: 968858543}
